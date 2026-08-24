@@ -1,6 +1,7 @@
 package applicatie;
 
 import dienst.BedrijfDienst;
+import hulpmiddel.BestandSchrijver;
 import model.Bedrijf;
 
 import java.util.ArrayList;
@@ -9,14 +10,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         BedrijfDienst bedrijfDienst = new BedrijfDienst();
+        BestandSchrijver bestandSchrijver = new BestandSchrijver();
         Scanner scanner = new Scanner(System.in);
+
+        ArrayList<Bedrijf> laatsteZoekresultaten = new ArrayList<>();
 
         boolean actief = true;
 
         while (actief) {
             System.out.println("\nKET bedrijven applicatie");
             System.out.println("1. Bedrijven zoeken");
-            System.out.println("2. Afsluiten");
+            System.out.println("2. Laatste zoekresultaten opslaan");
+            System.out.println("3. Afsluiten");
             System.out.print("Maak een keuze: ");
 
             String keuze = scanner.nextLine();
@@ -26,14 +31,14 @@ public class Main {
                     System.out.print("Geef een zoekterm: ");
                     String zoekterm = scanner.nextLine();
 
-                    ArrayList<Bedrijf> resultaten = bedrijfDienst.zoekBedrijven(zoekterm);
+                    laatsteZoekresultaten = bedrijfDienst.zoekBedrijven(zoekterm);
 
-                    if (resultaten.isEmpty()) {
+                    if (laatsteZoekresultaten.isEmpty()) {
                         System.out.println("Geen bedrijven gevonden.");
                     } else {
                         System.out.println("Zoekresultaten:");
 
-                        for (Bedrijf bedrijf : resultaten) {
+                        for (Bedrijf bedrijf : laatsteZoekresultaten) {
                             System.out.println("--------------------");
                             System.out.println(bedrijf);
                         }
@@ -41,6 +46,13 @@ public class Main {
                     break;
 
                 case "2":
+                    bestandSchrijver.schrijfBedrijvenNaarBestand(
+                            laatsteZoekresultaten,
+                            "zoekresultaten.txt"
+                    );
+                    break;
+
+                case "3":
                     System.out.println("Applicatie wordt afgesloten.");
                     actief = false;
                     break;
