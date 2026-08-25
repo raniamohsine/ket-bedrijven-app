@@ -68,5 +68,9 @@ public class BedrijfDienst {
         }
           return resultaten;
      }
+
+     public void voegBedrijfToe(Bedrijf bedrijf) {
+
+     }
 }
 
