@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Deze Klasse stelt een student voor.
+ * Deze klasse stelt een student voor.
  */
 
 public class Student extends Gebruiker {

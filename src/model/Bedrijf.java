@@ -80,6 +80,11 @@ public class Bedrijf {
         this.zoekwoorden = zoekwoorden;
     }
 
+    /**
+     * Geeft de publieke gegevens van een bedrijf terug als tekst.
+     *
+     * @return tekst met de gegevens van het bedrijf
+     */
     @Override
     public String toString() {
         return "Bedrijf: " + naam +

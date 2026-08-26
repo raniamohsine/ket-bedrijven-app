@@ -7,6 +7,6 @@ package model;
 public class Docent extends Gebruiker{
 
     public Docent(String naam) {
-        super(naam, GebruikersRol.DOCENT);
+          super(naam, GebruikersRol.DOCENT);
     }
 }

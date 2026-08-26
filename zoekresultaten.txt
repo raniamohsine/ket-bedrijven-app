@@ -1,7 +1,7 @@
 --------------------
-Bedrijf: DesignLab
-Contactpersoon: Emma Janssens
-Email: hello@designlab.be
-Telefoonnummer: 02 555 66 77
-Adres: Elsene
-Omschrijving: Creatief bedrijf voor webdesign en branding.
+Bedrijf: TechBrussels
+Contactpersoon: Sara Peeters
+Email: info@techbrussels.be
+Telefoonnummer: 02 123 45 67
+Adres: Brussel
+Omschrijving: IT-bedrijf dat werkt rond softwareontwikkeling.

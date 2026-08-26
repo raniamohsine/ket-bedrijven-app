@@ -11,6 +11,12 @@ import java.util.ArrayList;
  */
 public class BestandSchrijver {
 
+    /**
+     * Schrijft een lijst van bedrijven naar een tekstbestand.
+     *
+     * @param bedrijven de lijst met bedrijven die opgeslagen wordt
+     * @param bestandsNaam de naam van het tekstbestand
+     */
     public void schrijfBedrijvenNaarBestand(ArrayList<Bedrijf> bedrijven, String bestandsNaam) {
         try (FileWriter writer = new FileWriter(bestandsNaam)) {
 

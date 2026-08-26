@@ -2,6 +2,7 @@ package model;
 
 /**
  * Basisklasse voor alle gebruikers van de applicatie.
+ * Elke gebruiker heeft een naam en een rol.
  */
 
 public abstract class Gebruiker {
